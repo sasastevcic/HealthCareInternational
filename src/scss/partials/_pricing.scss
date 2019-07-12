@@ -1,0 +1,125 @@
+.wrapper-pricing {
+  background-color: $grey;
+  height: 697px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  hr {
+    color: $dark-grey;
+    background-color: $dark-grey;
+    border: 0;
+    height: 1px;
+    opacity: .2;
+    width: 980px;
+    margin-top: 5px;
+  }
+  h2 {
+    color: $dark-grey;
+    margin-top: 2px;
+  }
+}
+
+.pricing {
+  background-color: $grey;
+  height: 697px;
+}
+
+.appointments {
+  display: flex;
+  .appoint {
+    position: relative;
+    background-color: $white;
+    width: 401px;
+    height: 443px;
+    margin: 39px 20px;
+    border: 1px solid lighten($color: $dark-grey, $amount: 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    p {
+      margin: 136px 0 20px;
+      line-height: 30px;
+      font-size: 20px;
+      letter-spacing: .1px;
+    }
+    .btn {
+      position: absolute;
+      bottom: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.circle-price {
+  position: absolute;
+  top: 148px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 900;
+  color: $white;
+}
+
+.circle-green {
+  @include hover {
+    background-color: darken($color: $green, $amount: 10%);
+    cursor: pointer;
+  };
+  background-color: $green;
+  padding-top: 16px;
+  line-height: 30px;
+  .circle-large {
+    color: $white;
+  }
+}
+
+.circle-blue {
+  @include hover {
+    background-color: darken($color: $blue, $amount: 10%);
+    cursor: pointer;
+  };
+  background-color: $blue;
+  line-height: 123px;
+}
+
+.circle-large {
+  font-size: 40px;
+}
+
+.ring {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 148px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.ring-green {
+  border: 5px solid $green;
+}
+
+.ring-blue {
+  border: 5px solid $blue;
+}
+
+.select-appoint {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 38px 9px 36px 0;
+}
+
+.appoint-green {
+  color: $green;
+}
+
+.appoint-blue {
+  color: $blue;
+}

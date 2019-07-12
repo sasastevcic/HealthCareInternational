@@ -1,0 +1,66 @@
+.wrapper-doctors {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  hr {
+    color: $white;
+    background-color: $white;
+    border: 0;
+    height: 1px;
+    opacity: .2;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .heading-white {
+    color: $white;
+    margin-top: 2px;
+  }
+  >p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 33px 0 15px;
+    text-align: center;
+  }
+  p {
+    color: $white;
+  }
+}
+
+.doctors {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 598px;
+  // margin-bottom: 58px;
+}
+
+.bkg-green {
+  background-size: cover;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 598px;
+  z-index: -1;
+}
+
+.our-doctors {
+  display: flex;
+  justify-content: space-between;
+  .doc {
+    margin: 15px 18px;
+    text-align: center;
+    p {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 30px;
+      margin: 4px 0;
+    }
+    img {
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@mixin main {
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    color: $text-color-main;
+    box-sizing: border-box;
+  }
+}
+
+@mixin clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin hover {
+  &:hover {
+    transition: ease-in-out 300ms;
+    @content;
+  }
+}
+
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint * 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    .col-#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through $grid-cols {
+      .col-#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+        padding: 10px;
+      }
+      // [class^='col-'] {
+      //   padding: 10px;
+      // }
+      .col-#{$i} {
+        padding: 10px;
+      }
+      .col-#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
+@mixin xsSize {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin xlSize {
+  @media screen and (min-width: $xl-size) {
+    @content;
+  }
+}

@@ -1,0 +1,43 @@
+.wrapper-header {
+  height: 80px;
+  width: 980px;
+  margin: 0 auto;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    float: left;
+  }
+}
+
+.header {
+  background-color: $white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  li {
+    a {
+      text-decoration: none;
+      line-height: .4px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .btn {
+      margin-left: 29px;
+    }
+    &:nth-child(5) {
+      margin: 0 19px 0 32px;
+    }
+    &:nth-child(3) {
+      margin: 0 23px 0 25px;
+    }
+    &:nth-child(1) {
+      margin-right: 23px;
+    }
+  }
+}

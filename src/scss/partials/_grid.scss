@@ -1,0 +1,56 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row div {
+  height: 50px;
+  background-color: $green;
+  border: 1px solid $yellow;
+}
+
+div.col-xl-4 {
+  background-color: $grey;
+}
+
+$grid-cols: 12;
+
+$grid-md: 768;
+$grid-lg: 992;
+$grid-xl: 1200;
+
+@for $i from 1 through $grid-cols {
+  .col-#{$i} {
+    flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+  }
+}
+
+$map-grid-props: ('sm': 0, 'md': $grid-md, 'lg': $grid-lg, 'xl': $grid-xl);
+
+@each $modifier , $breakpoint in $map-grid-props {
+  @include create-col-classes($modifier, $grid-cols, $breakpoint);
+}
+
+// @media screen and (min-width: $grid-md * 1px) {
+//   @for $i from 1 through $grid-cols {
+//     .col-md-#{$i} {
+//       flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $grid-lg * 1px) {
+//   @for $i from 1 through $grid-cols {
+//     .col-lg-#{$i} {
+//       flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: $grid-xl * 1px) {
+//   @for $i from 1 through $grid-cols {
+//     .col-xl-#{$i} {
+//       flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+//     }
+//   }
+// }

@@ -1,0 +1,25 @@
+@import 'partials/reset';
+@import 'modules/vars';
+@import 'partials/fonts';
+@import 'modules/mixins';
+@import 'partials/layout';
+@import 'partials/buttons';
+@import 'partials/header';
+@import 'partials/mainpage';
+@import 'partials/howitworks';
+@import 'partials/doctors';
+@import 'partials/pricing';
+@import 'partials/footer';
+@import 'partials/grid';
+
+@include main;
+
+h2 {
+  font-size: 70px;
+}
+
+body {
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 100;
+}
